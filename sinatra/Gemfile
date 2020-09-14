@@ -1,0 +1,16 @@
+source 'https://rubygems.org'
+
+gem 'sinatra', '< 2.0.1'
+gem 'sqlite3'
+gem 'pg'
+gem 'activerecord', :require => "active_record"
+gem 'rake'
+gem 'pry'
+gem 'sinatra-activerecord'
+#gem 'sinatra-namespace'
+gem 'require_all'
+gem 'yaml'
+gem 'shotgun'
+gem 'bcrypt'
+gem 'activesupport'
+gem 'slim'

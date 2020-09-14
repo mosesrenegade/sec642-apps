@@ -1,0 +1,9 @@
+<h1>User Manager</h1>
+
+<ul>
+  <% @users.each do |user| %>
+  <li>
+      <a href="/users/<%= user.id %>"><%= user.email %> - <%= user.role %></a>
+  </li>
+  <% end %>
+</ul>

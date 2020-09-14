@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= settings.blog_name %> | <%= title %></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= settings.blog_description %>">
+    <meta name="author" content="Sinatra Blog CMS">
+        <!-- Bootstrap core CSS -->
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bootstrap.min.css">    
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" type="text/css">
+    <link href="<%= link 'css/styles.css' %>" rel="stylesheet">
+
+    <link rel="shortcut icon" href="<%= link 'favicon.ico' %>" />
+    <link rel="alternate" title="RSS for <%= settings.blog_name %>" href="<%= link 'feed' %>" type="application/rss+xml" />
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+  <noscript>
+     You need to enable JavaScript to run this app.
+  </noscript>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default" role="navigation"><!-- navbar-fixed-top-->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%= link %>"><%= settings.blog_name %></a>
+        </div>
+        <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+        </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="link" href=<%= link 'signup' %> target="_blank">Signup</a></li>
+            <li><a class="link" href=<%= link 'login' %> target=_"blank">Login</a></li>
+            <li><a class="link" href=<%= link 'posts' %> target=_"blank">Posts</a></li>
+            <li><a class="rss" href="<%= link 'feed' %>" target="_blank">RSS</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>    
+    <div id="footer">
+      <div class="container">
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container">
+      <div class="row">
+          <%= yield %>
+        </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/bootstrap.min.js"></script>
+
+    <!-- <script type="text/javascript" src="<%= link 'js/app.main.js' %>"></script> -->
+  </body>
+</html>   

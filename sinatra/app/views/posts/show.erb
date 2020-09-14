@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+
+<h2>Content</h2>
+<p><%= @post.content %></p>
+
+<h2>User</h2>
+<p><%= @post.user_id %></p>
+
+<p><a href="/posts">Back to all posts</a></p>
+<p><a href="/posts/<%= @post.id %>/edit">Edit this post</a></p>

@@ -1,0 +1,9 @@
+<h1>User id: <%= @users.id %></h1>
+
+<h2>User: E-mail</h2> <p><%= @users.email %></p>
+
+<h2>User Role</h2>
+<p><%= @users.role %></p>
+
+<p><a href="/manage">Back to management gui</a></p>
+<p><a href="/users/<%= @users.id %>/edit">Edit this user</a></p>

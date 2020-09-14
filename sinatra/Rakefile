@@ -1,0 +1,15 @@
+require_relative './config/environment'
+
+require 'active_support'
+#require 'sinatra/namespace'
+require 'slim'
+require 'sinatra/activerecord/rake'
+
+task :environment do
+  require_relative './config/environment'
+end
+
+desc 'drop into the Pry console'
+task :console => :environment do
+  Pry.start
+end
